@@ -3,6 +3,9 @@ import React from 'react'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import{MagnifyingGlassIcon} from 'react-native-heroicons/outline'
+import Categories from '../components/categories'
+import SortCategories from '../components/sortCategories'
+
 
 const ios = Platform.OS == 'ios'
 const topMargin = ios ? 'mt-3': 'mt-10'
@@ -29,7 +32,12 @@ export default function HomeScreen() {
                         />
                     </View>
                 </View>
-                <View className='mb-4'></View>
+                <View className='mb-4'>
+                    <Categories />
+                </View>
+                <View className='mb-4'>
+                    < SortCategories />
+                </View>
             </ScrollView>
             </SafeAreaProvider>
         
