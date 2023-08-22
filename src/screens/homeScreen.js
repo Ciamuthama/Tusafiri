@@ -5,6 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import{MagnifyingGlassIcon} from 'react-native-heroicons/outline'
 import Categories from '../components/categories'
 import SortCategories from '../components/sortCategories'
+import Destinations from '../components/destinations'
 
 
 const ios = Platform.OS == 'ios'
@@ -37,6 +38,9 @@ export default function HomeScreen() {
                 </View>
                 <View className='mb-4'>
                     < SortCategories />
+                </View>
+                <View>
+                    < Destinations/>
                 </View>
             </ScrollView>
             </SafeAreaProvider>

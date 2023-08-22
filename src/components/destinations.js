@@ -1,0 +1,47 @@
+import { View, Text, TouchableOpacity,Image } from 'react-native'
+import React, { useState } from 'react'
+import { destinationData } from '../constants'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
+import { LinearGradient } from 'expo-linear-gradient'
+import { HeartIcon } from 'react-native-heroicons/outline'
+import FillHeart from './fillHeart'
+import OutlineHeart from './outlineHeart'
+
+
+export default function Destinations() {
+  return (
+    <View className='mx-4 flex-row justify-between flex-wrap'>
+      {
+        destinationData.map((dest,index)=>{
+            return(
+                <DestinationCard key={index} dest={dest}/>
+                    
+            )
+        })
+      }
+    </View>
+  )
+}
+
+const DestinationCard = ({ dest }) => {
+    
+
+    return(
+        <TouchableOpacity style={{ width: wp(44), height: wp(65) }}
+            className='flex justify-end relative p-4 py-6 space-y-2 mb-5'
+        > 
+            <Image source={dest.image} style={{ width: wp(44), height: wp(65) }} className='absolute rounded-xl' />
+            <LinearGradient
+                        colors={['transparent', 'rgba(0,0,0,0.8)']}
+                        start={[0.5, 0]} end={[0.5, 1]}
+                        style={{ width: wp(44), height: hp(15), borderBottomRightRadius:12, borderBottomLeftRadius:12 }}
+                        className='absolute bottom-0'
+            />
+            <TouchableOpacity className='absolute top-1 right-3  rounded-full p-3' style={{backgroundColor:"rgba(255,255,255,0.4)"}} onPress={()=><FillHeart className='absolute top-1 right-3  rounded-full p-3' /> }>
+                <OutlineHeart className='absolute top-1 right-3  rounded-full p-3'  />
+            </TouchableOpacity>
+            <Text style={{fontSize:wp(4)}} className='text-white font-semibold'>{dest.title}</Text>
+            <Text  style={{fontSize:wp(2.2)}} className='text-white'>{ dest.shortDescription}</Text>
+            </TouchableOpacity>
+    )
+}
