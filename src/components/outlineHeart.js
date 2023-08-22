@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import FillHeart from "./fillHeart";
 
 export default function OutlineHeart() {
-    const [heart,toggleHeart] = useState(<HeartIcon size={wp(5.5)} color='white' />)
+    const [heart,toggleHeart] = useState(<HeartIcon size={wp(5)} color='white' />)
     return (
       <TouchableOpacity  onPress={()=>toggleHeart(<FillHeart/>)}>
          {heart}

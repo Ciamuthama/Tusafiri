@@ -6,15 +6,17 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 import FillHeart from './fillHeart'
 import OutlineHeart from './outlineHeart'
+ import { useNavigation } from '@react-navigation/native'
 
 
 export default function Destinations() {
+    const navigation = useNavigation()
     return (
         <View className='mx-4 flex-row justify-between flex-wrap'>
             {
                 destinationData.map((dest, index) => {
                     return (
-                        <DestinationCard key={index} dest={dest} />
+                        <DestinationCard navigation={navigation} key={index} dest={dest}  />
 
                     )
                 })
@@ -23,11 +25,11 @@ export default function Destinations() {
     )
 }
 
-const DestinationCard = ({ dest }) => {
-
-
+const DestinationCard = ({ dest, navigation }) => {
     return (
-        <TouchableOpacity style={{ width: wp(44), height: wp(65) }}
+        <TouchableOpacity
+            onPress={()=> navigation.navigate('Destination', {...dest})}
+            style={{ width: wp(44), height: wp(65) }}
             className='flex justify-end relative p-4 py-6 space-y-2 mb-5'
         >
             <Image source={dest.image} style={{ width: wp(44), height: wp(65) }} className='absolute rounded-xl' />
