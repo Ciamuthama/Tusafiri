@@ -9,16 +9,16 @@ import DestinationScreen from '../screens/DestinationScreen';
 
 const Stack = createNativeStackNavigator();
 
-function AppNavigation({navigation}) {
+function AppNavigation({ navigation }) {
     return (
         <NavigationContainer>
-            
-            <Stack.Navigator initialRouteName='Welcome' screenOptions={{headerShown:false}} >
+
+            <Stack.Navigator initialRouteName='Welcome' screenOptions={{ headerShown: false }} >
                 <Stack.Screen name='Welcome Screen' component={WelcomeScreen} />
                 <Stack.Screen name='Home' component={HomeScreen} />
                 <Stack.Screen name='Destination' component={DestinationScreen} navigation={navigation} />
             </Stack.Navigator>
-      
+
         </NavigationContainer>
     );
 }
