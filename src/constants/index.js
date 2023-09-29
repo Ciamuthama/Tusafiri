@@ -13,22 +13,22 @@ export const categoriesData = [
         title: 'Camp',
         image: require('../../assets/images/camp.png'),
     },
-    {
-        title: 'Sunset',
-        image: require('../../assets/images/sunset.png'),
-    },
-    {
-        title: 'Hiking',
-        image: require('../../assets/images/hiking.png'),
-    },
+    // {
+    //     title: 'Sunset',
+    //     image: require('../../assets/images/sunset.png'),
+    // },
+    // {
+    //     title: 'Hiking',
+    //     image: require('../../assets/images/hiking.png'),
+    // },
     {
         title: 'Beach',
         image: require('../../assets/images/beach.png'),
     },
-    {
-        title: 'Forest',
-        image: require('../../assets/images/forest.png'),
-    },
+    // {
+    //     title: 'Forest',
+    //     image: require('../../assets/images/forest.png'),
+    // },
 ] 
 
 export const destinationData = [
@@ -71,6 +71,6 @@ export const destinationData = [
         price: '$12,954',
         shortDescription: "Todaiji is one of Japan's most famous and significant temples and a landmark of Nara",
         longDescription:"Tōdai-ji is a Buddhist temple complex that was once one of the powerful Seven Great Temples, located in the city of Nara, Japan. Though it was originally founded in the year 738 CE, Tōdai-ji was not opened until the year 752 CE.",
-        image: require('../../assets/images/forest.png')
+        image: require('../../assets/images/island.png')
     }
 ] 
