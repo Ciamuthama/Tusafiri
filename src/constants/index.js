@@ -13,22 +13,22 @@ export const categoriesData = [
         title: 'Camp',
         image: require('../../assets/images/camp.png'),
     },
-    // {
-    //     title: 'Sunset',
-    //     image: require('../../assets/images/sunset.png'),
-    // },
-    // {
-    //     title: 'Hiking',
-    //     image: require('../../assets/images/hiking.png'),
-    // },
+    {
+        title: 'Sunset',
+        image: require('../../assets/images/sunset.png'),
+    },
+    {
+        title: 'Hiking',
+        image: require('../../assets/images/hiking.png'),
+    },
     {
         title: 'Beach',
         image: require('../../assets/images/beach.png'),
     },
-    // {
-    //     title: 'Forest',
-    //     image: require('../../assets/images/forest.png'),
-    // },
+    {
+        title: 'Forest',
+        image: require('../../assets/images/forest.png'),
+    },
 ] 
 
 export const destinationData = [
