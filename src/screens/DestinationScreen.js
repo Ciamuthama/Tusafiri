@@ -1,21 +1,22 @@
-import { View, Text, Image, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
+import {SafeAreaView} from 'react-native-safe-area-context'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen'
 import { ChevronDoubleLeftIcon, MapPinIcon, SunIcon } from 'react-native-heroicons/solid'
 import { useNavigation } from '@react-navigation/native'
 
 import { theme } from '../theme'
 import { ClockIcon } from 'react-native-heroicons/solid'
-import useFillHeart from '../hooks/useFillHeart'
-import useOutlineHeart from '../hooks/useOutlineHeart'
+// import useFillHeart from '../hooks/useFillHeart'
+// import useOutlineHeart from '../hooks/useOutlineHeart'
 
 
 
 export default function DestinationScreen({ route }) {
     const { title, image, price, longDescription, duration, distance, weather } = route.params
     const navigation = useNavigation()
-    const fill = useFillHeart()
-    const  outline = useOutlineHeart()
+    // const fill = useFillHeart()
+    // const  outline = useOutlineHeart()
 
     return (
         <View className="bg-white flex-1">
@@ -29,9 +30,9 @@ export default function DestinationScreen({ route }) {
                     <ChevronDoubleLeftIcon size={wp(5)} strokeWidth={4} color={'white'} />
                 </TouchableOpacity>
 
-                <TouchableOpacity className='absolute  right-3  rounded-full p-3' style={{ backgroundColor: "rgba(255,255,255,0.4)" }} onPress={() => (fill)}>
+                {/* <TouchableOpacity className='absolute  right-3  rounded-full p-3' style={{ backgroundColor: "rgba(255,255,255,0.4)" }} onPress={() => (fill)}>
                     {outline}
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </SafeAreaView>
             <View style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }} className='px-5 flex flex-1 justify-between bg-white pt-8 -mt-14'>
 

@@ -7,8 +7,8 @@ import {
 } from "react-native-responsive-screen";
 import { LinearGradient } from "expo-linear-gradient";
 
-import useFillHeart from "../hooks/useFillHeart";
-import useOutlineHeart from "../hooks/useOutlineHeart";
+// import useFillHeart from "../hooks/useFillHeart";
+// import useOutlineHeart from "../hooks/useOutlineHeart";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Destinations() {
@@ -26,8 +26,8 @@ export default function Destinations() {
 }
 
 const DestinationCard = ({ dest, navigation }) => {
-    const fill = useFillHeart()
-    const outline =useOutlineHeart()
+    // const fill = useFillHeart()
+    // const outline =useOutlineHeart()
   return (
     <TouchableOpacity
       onPress={() => navigation.navigate("Destination", { ...dest })}
@@ -51,13 +51,13 @@ const DestinationCard = ({ dest, navigation }) => {
         }}
         className="absolute bottom-0"
       />
-      <TouchableOpacity
+      {/* <TouchableOpacity
         className="absolute top-1 right-3  rounded-full p-3"
         style={{ backgroundColor: "rgba(255,255,255,0.4)" }}
         onPress={() => (fill)}
       >
         {outline}
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <Text style={{ fontSize: wp(4) }} className="text-white font-semibold">
         {dest.title}
       </Text>
