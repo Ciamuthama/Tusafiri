@@ -1,6 +1,6 @@
 # Tusafiri 🌍✈️
 
-Welcome to Tusafiri! Your journey begins here, where you can explore captivating destinations through beautiful images.
+Welcome to Tusafiri! 
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
