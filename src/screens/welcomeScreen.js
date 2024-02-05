@@ -5,16 +5,12 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { useNavigation } from '@react-navigation/native'
 
 export default function WelcomeScreen() {
-
     const navigation = useNavigation()
-
     return (
-
         <View className='flex-1 flex justify-end' >
             <Image
                 source={require('../../assets/images/welcome.png')}
                 className='h-full w-full absolute'
-
             />
             <View className='p-5 pb-10 space-y-8'>
                 <LinearGradient
@@ -22,7 +18,6 @@ export default function WelcomeScreen() {
                     start={[0.5, 0]} end={[0.5, 1]}
                     style={{ width: wp(100), height: hp(60) }}
                     className='absolute bottom-0'
-
                 />
 
                 <View className='space-y-3'>
