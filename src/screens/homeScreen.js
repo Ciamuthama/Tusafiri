@@ -13,7 +13,6 @@ const topMargin = ios ? 'mt-3' : 'mt-10'
 
 export default function HomeScreen() {
     return (
-
         <SafeAreaProvider className='flex-1 bg-white'>
             <ScrollView showsVerticalScrollIndicator={false} className={'space-y-6 ' + topMargin}>
                 <View className="mx-5 flex-row justify-between items-center mb-10">
@@ -44,6 +43,5 @@ export default function HomeScreen() {
                 </View>
             </ScrollView>
         </SafeAreaProvider>
-
     )
 }
